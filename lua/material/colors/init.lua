@@ -1,20 +1,20 @@
 local high_visibility = require "material.util.config".settings.high_visibility
 
----colots table
+---colors table
 local colors = {
   ---main colors
   main = {
-    white    = "#EEFFFF",
-    gray     = "#717CB4",
-    black    = "#000000",
-    red      = "#F07178",
-    green    = "#C3E88D",
-    yellow   = "#FFCB6B",
-    blue     = "#82AAFF",
-    paleblue = "#B0C9FF",
-    cyan     = "#89DDFF",
-    purple   = "#C792EA",
-    orange   = "#F78C6C",
+    white      = "#EEFFFF",
+    gray       = "#717CB4",
+    black      = "#000000",
+    red        = "#F07178",
+    green      = "#C3E88D",
+    yellow     = "#FFCB6B",
+    blue       = "#82AAFF",
+    paleblue   = "#B0C9FF",
+    cyan       = "#89DDFF",
+    purple     = "#C792EA",
+    orange     = "#F78C6C",
     -- pink       = "#FF9CAC",
 
     darkred    = "#DC6068",
@@ -68,13 +68,10 @@ if vim.g.material_style == "darker" then
   colors.editor.highlight = "#3F3F3F"
   colors.editor.disabled  = "#474747"
   colors.editor.accent    = "#FF9800"
-
-
 elseif vim.g.material_style == "lighter" then
   -- Lighter theme style
 
   if high_visibility.lighter then
-
     -- Lighter theme style with high contrast
     colors.editor.fg           = "#213B47" -- 20% darkened
     colors.editor.fg_dark      = "#61747D" -- 20% darkened
@@ -83,18 +80,16 @@ elseif vim.g.material_style == "lighter" then
     colors.editor.accent       = "#0089A1" -- 20% darkened
     colors.syntax.comments     = "#778C96" -- 20% darkened
 
-    colors.main.red      = "#B20602" -- 20% darkened
-    colors.main.green    = "#5E8526" -- 20% darkened
-    colors.main.yellow   = "#C37101" -- 20% darkened
-    colors.main.blue     = "#2E4F85" -- 20% darkened
-    colors.main.paleblue = "#54637D" -- 20% darkened
-    colors.main.cyan     = "#067A82" -- 20% darkened
-    colors.main.purple   = "#491ACC" -- 20% darkened
-    colors.main.orange   = "#C43A14" -- 20% darkened
-    colors.main.pink     = "#CC203D" -- 20% darkened
-
+    colors.main.red            = "#B20602" -- 20% darkened
+    colors.main.green          = "#5E8526" -- 20% darkened
+    colors.main.yellow         = "#C37101" -- 20% darkened
+    colors.main.blue           = "#2E4F85" -- 20% darkened
+    colors.main.paleblue       = "#54637D" -- 20% darkened
+    colors.main.cyan           = "#067A82" -- 20% darkened
+    colors.main.purple         = "#491ACC" -- 20% darkened
+    colors.main.orange         = "#C43A14" -- 20% darkened
+    colors.main.pink           = "#CC203D" -- 20% darkened
   else
-
     -- default Lighter theme style
     colors.editor.fg           = "#546E7A"
     colors.editor.fg_dark      = "#94A7B0"
@@ -103,17 +98,16 @@ elseif vim.g.material_style == "lighter" then
     colors.editor.accent       = "#00BCD4"
     colors.syntax.comments     = "#AABFC9"
 
-    colors.main.red   = "#E53935"
-    colors.main.green = "#91B859"
+    colors.main.red            = "#E53935"
+    colors.main.green          = "#91B859"
 
-    colors.main.yellow   = "#F6A434"
-    colors.main.blue     = "#6182B8"
-    colors.main.paleblue = "#8796B0"
-    colors.main.cyan     = "#39ADB5"
-    colors.main.purple   = "#7C4DFF"
-    colors.main.orange   = "#F76D47"
-    colors.main.pink     = "#FF5370"
-
+    colors.main.yellow         = "#F6A434"
+    colors.main.blue           = "#6182B8"
+    colors.main.paleblue       = "#8796B0"
+    colors.main.cyan           = "#39ADB5"
+    colors.main.purple         = "#7C4DFF"
+    colors.main.orange         = "#F76D47"
+    colors.main.pink           = "#FF5370"
   end
 
   colors.editor.bg        = "#FAFAFA"
@@ -125,11 +119,9 @@ elseif vim.g.material_style == "lighter" then
   colors.editor.disabled  = "#D2D4D5"
   colors.editor.cursor    = "#272727"
 
-  colors.editor.white = "#FFFFFF"
-  colors.editor.gray  = "#717CB4"
-  colors.editor.title = colors.editor.black
-
-
+  colors.editor.white     = "#FFFFFF"
+  colors.editor.gray      = "#717CB4"
+  colors.editor.title     = colors.editor.black
 elseif vim.g.material_style == "palenight" then
   -- Palenight theme style
 
@@ -146,7 +138,6 @@ elseif vim.g.material_style == "palenight" then
   colors.editor.disabled     = "#515772"
   colors.editor.accent       = "#AB47BC"
   colors.syntax.comments     = "#676E95"
-
 elseif vim.g.material_style == "deep ocean" then
   -- Deep Ocean theme style
 
@@ -164,7 +155,6 @@ elseif vim.g.material_style == "deep ocean" then
   colors.editor.disabled     = "#464B5D"
   colors.editor.accent       = "#84FFFF"
   colors.syntax.comments     = "#464B5D"
-
 elseif vim.g.material_style == "oceanic" then
   -- Oceanic theme style
 
@@ -182,8 +172,8 @@ elseif vim.g.material_style == "oceanic" then
   colors.editor.contrast     = "#1E272C"
   colors.editor.active       = "#314549"
   colors.syntax.comments     = "#546E7A"
-
-else vim.g.material_style    = "hybrid"
+else
+  vim.g.material_style       = "hybrid"
   -- Oceanic theme style
   colors.main.white          = "#D9D9D9"
   colors.main.purple         = "#B294BB"
@@ -201,7 +191,6 @@ else vim.g.material_style    = "hybrid"
   colors.editor.contrast     = "#1E272C"
   colors.editor.active       = "#314549"
   colors.syntax.comments     = "#546E7A"
-
 end
 
 ---syntax colors
@@ -230,14 +219,14 @@ if vim.g.material_style == "hybrid" then
 end
 
 ---git colors
-colors.git.added    = colors.main.green
-colors.git.removed  = colors.main.red
-colors.git.modified = colors.main.blue
+colors.git.added                       = colors.main.green
+colors.git.removed                     = colors.main.red
+colors.git.modified                    = colors.main.blue
 
 ---lsp colors
-colors.lsp.warning = colors.main.yellow
-colors.lsp.info    = colors.main.paleblue
-colors.lsp.hint    = colors.main.pink
+colors.lsp.warning                     = colors.main.yellow
+colors.lsp.info                        = colors.main.paleblue
+colors.lsp.hint                        = colors.main.pink
 
 ---contrasted backgrounds
 colors.backgrounds.sidebars            = colors.editor.bg

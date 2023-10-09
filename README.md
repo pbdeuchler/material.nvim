@@ -116,7 +116,7 @@ require('material').setup({
         sidebars = false, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
         floating_windows = false, -- Enable contrast for floating windows
         cursor_line = false, -- Enable darker background for the cursor line
-        non_current_windows = false, -- Enable darker background for non-current windows
+        non_current_windows = false, -- Enable contrasted background for non-current windows
         filetypes = {}, -- Specify which filetypes get the contrasted (darker) background
     },
 
@@ -140,6 +140,7 @@ require('material').setup({
         -- "lspsaga",
         -- "mini",
         -- "neogit",
+        -- "neorg",
         -- "nvim-cmp",
         -- "nvim-navic",
         -- "nvim-tree",
@@ -167,7 +168,7 @@ require('material').setup({
 
     async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
-    custom_colors = nil, -- If you want to everride the default colors, set this to a function
+    custom_colors = nil, -- If you want to override the default colors, set this to a function
 
     custom_highlights = {}, -- Overwrite highlights with your own
 })
@@ -185,7 +186,7 @@ local colors = require 'material.colors'
 
 material.setup{
     custom_highlights = {
-        LineNr = { bg = '#FF0000' }
+        LineNr = { bg = '#FF0000' },
         CursorLine = { fg = colors.editor.constrast , underline = true },
 
         -- This is a list of possible values
@@ -198,7 +199,7 @@ material.setup{
             underline = false, -- make group underlined
             undercurl = false, -- make group undercurled
             underdot = false, -- make group underdotted
-            underdash = false -- make group underslashed
+            underdash = false, -- make group underslashed
             striketrough = false, -- make group striked trough
             reverse = false, -- reverse the fg and bg colors
             link = "SomeOtherGroup" -- link to some other highlight group
@@ -207,7 +208,7 @@ material.setup{
 
     -- Custom colors must be a function that takes in the default colors table as
     -- a paramter, and then modifies them.
-    -- To se the available colors, see lua/material/colors/init.lua
+    -- To see the available colors, see lua/material/colors/init.lua
     custom_colors = function(colors)
         colors.editor.bg = "#SOME_COLOR"
         colors.main.purple = "#SOME_COLOR"

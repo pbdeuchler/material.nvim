@@ -20,7 +20,6 @@ local prepare_environment = function()
     vim.g.colors_name     = "material"
     vim.opt.termguicolors = true
 
-
     if vim.fn.exists "syntax_on" then
         vim.cmd "syntax reset"
     end
@@ -121,13 +120,6 @@ M.load = function()
     else
         load_async()
     end
-
-    -- DONT FORGET TO REMOVE *****************************************************
-    if settings.italics then
-        vim.notify ("Material.nvim had breaking changes", vim.log.levels.WARN)
-        vim.notify ("See the new config in the README", vim.log.levels.WARN)
-    end
-    -- DONT FORGET TO REMOVE *****************************************************
 end
 
 return M
