@@ -11,8 +11,8 @@ local M = {}
 
 M.load = function()
   local plugin_hls = {
-    NeoTreeNormal       = { bg = b.sidebars },
-    NeoTreeNormalNC     = { bg = b.sidebars },
+    NeoTreeNormal       = { fg = m.white, bg = b.sidebars },
+    NeoTreeNormalNC     = { fg = m.white, bg = b.sidebars },
     NeoTreeIndentMarker = { fg = e.border },
     NeoTreeTitleBar     = { fg = e.title, bg = b.floating_windows },
 
