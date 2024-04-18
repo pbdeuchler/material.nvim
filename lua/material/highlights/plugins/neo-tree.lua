@@ -3,6 +3,7 @@ local colors = require "material.colors"
 -- remove the variables that you won't be needing
 -- to see what colors are available, check colors/init.lua
 local e = colors.editor
+local m = colors.main
 local g = colors.git
 local b = colors.backgrounds
 
@@ -21,7 +22,7 @@ M.load = function()
     NeoTreeGitModified  = { fg = m.white, italic = true },
     NeoTreeGitUnstaged  = { fg = g.added },
     NeoTreeGitUntracked = { fg = g.added },
-
+    -- NeoTreeDirectoryIcon =
   }
 
   return plugin_hls
