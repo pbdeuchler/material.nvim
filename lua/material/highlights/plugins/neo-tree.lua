@@ -28,6 +28,6 @@ M.load = function()
   return plugin_hls
 end
 
-M.async = true -- should the plugin highlights be loaded async [true/false]
+M.async = false -- should the plugin highlights be loaded async [true/false]
 
 return M
